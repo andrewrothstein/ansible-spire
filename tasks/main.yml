@@ -1,2 +1,59 @@
 ---
-# tasks file for spire
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: check for install...
+  become: yes
+  stat:
+    path: '{{ spire_install_dir }}'
+  changed_when: False
+  register: spire_binary
+- when: not spire_binary.stat.exists
+  block:
+    - name: download archive...
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ spire_url }}'
+        dest: /tmp/{{ spire_tgz }}
+        mode: 0644
+        checksum: '{{ spire_checksum }}'
+    - name: unarchive...
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{ spire_tgz }}
+        dest: '{{ spire_parent_install_dir }}'
+        creates: '{{ spire_install_dir }}'
+  always:
+    - name: cleanup
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{ spire_tgz }}
+        state: absent
+- name: link install dir
+  become: yes
+  become_user: root
+  file:
+    src: '{{ spire_install_dir }}'
+    dest: '{{ spire_link_dir }}'
+    state: link
+- name: link bins
+  become: yes
+  become_user: root
+  with_items:
+    - spire-server
+    - spire-agent
+  file:
+    src: '{{ spire_link_dir }}/bin/{{ item }}'
+    dest: '{{ spire_parent_install_dir }}/bin/{{ item }}'
+    state: link

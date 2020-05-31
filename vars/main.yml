@@ -4,3 +4,5 @@ spire_name: spire-{{ spire_ver }}
 spire_tgz: '{{ spire_name }}-{{ spire_platform }}.tar.gz'
 spire_url: '{{ spire_mirror }}/v{{ spire_ver }}/{{ spire_tgz }}'
 spire_checksum: '{{ spire_checksums[spire_ver][spire_platform] }}'
+spire_install_dir: '{{ spire_parent_install_dir }}/{{ spire_name }}'
+spire_link_dir: '{{ spire_parent_install_dir }}/spire'
