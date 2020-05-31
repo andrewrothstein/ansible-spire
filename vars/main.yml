@@ -1,0 +1,6 @@
+---
+# vars file for spire
+spire_name: spire-{{ spire_ver }}
+spire_tgz: '{{ spire_name }}-{{ spire_platform }}.tar.gz'
+spire_url: '{{ spire_mirror }}/v{{ spire_ver }}/{{ spire_tgz }}'
+spire_checksum: '{{ spire_checksums[spire_ver][spire_platform] }}'

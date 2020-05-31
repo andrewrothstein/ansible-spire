@@ -1,0 +1,10 @@
+---
+# defaults file for spire
+spire_ver: 0.10.0
+spire_platform: linux-x86_64-glibc
+spire_parent_install_dir: /usr/local
+spire_mirror: https://github.com/spiffe/spire/releases/download
+spire_checksums:
+  '0.10.0':
+    # https://github.com/spiffe/spire/releases/download/v0.10.0/spire-0.10.0-linux-x86_64-glibc_checksums.txt
+    linux-x86_64-glibc: sha256:3da8a0ca22d506edfadb287c44780f08364f20a17c5ba4cf0a108ef95e792c9d
