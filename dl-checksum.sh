@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/spiffe/spire/releases/download
 
@@ -6,7 +7,7 @@ dl()
 {
     local ver=$1
     local platform=$2
-    local file="spire-${ver}-${platform}_checksums.txt"
+    local file="spire-${ver}-${platform}_sha256sum.txt"
     local url=$MIRROR/v$ver/$file
 
     printf "    # %s\n" $url
@@ -16,7 +17,7 @@ dl()
 dlver () {
     local ver=$1
     printf "  '%s':\n" $ver
-    dl $ver linux-x86_64-glibc
+    dl $ver linux-amd64-glibc
 }
 
-dlver ${1:-0.10.0}
+dlver ${1:-1.7.2}

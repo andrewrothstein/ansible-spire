@@ -7,15 +7,6 @@ galaxy_info:
     - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
     - name: Alpine
       versions:
         - all
@@ -24,15 +15,20 @@ galaxy_info:
         - all
     - name: Debian
       versions:
-        - buster
-        - jessie
-        - stretch
+        - bookworm
+        - bullseye
+    - name: EL
+      versions:
+        - 8
+        - 9
+    - name: Fedora
+      versions:
+        - 37
+        - 38
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
   galaxy_tags:
     - development
   role_name: spire
-
-dependencies:
-  - role: andrewrothstein.unarchive-deps
-    version: v1.1.3
-  - role: andrewrothstein.alpine-glibc-shim
-    version: v2.0.11

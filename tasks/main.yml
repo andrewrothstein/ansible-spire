@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchivedeps
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
@@ -10,45 +12,45 @@
       paths:
         - '{{ role_path }}/vars'
 - name: check for install...
-  become: yes
+  become: true
   stat:
     path: '{{ spire_install_dir }}'
-  changed_when: False
+  changed_when: false
   register: spire_binary
 - when: not spire_binary.stat.exists
   block:
     - name: download archive...
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ spire_url }}'
-        dest: /tmp/{{ spire_tgz }}
+        dest: '{{ spire_tmp_tgz }}'
         mode: 0644
         checksum: '{{ spire_checksum }}'
-    - name: unarchive...
-      become: yes
+    - name: unarchiving {{ spire_tmp_tgz }}
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
-        src: /tmp/{{ spire_tgz }}
+        remote_src: true
+        src: '{{ spire_tmp_tgz }}'
         dest: '{{ spire_parent_install_dir }}'
         creates: '{{ spire_install_dir }}'
   always:
-    - name: cleanup
-      become: yes
+    - name: rm -f {{ spire_tmp_tgz }}
+      become: true
       become_user: root
       file:
-        path: /tmp/{{ spire_tgz }}
+        path: '{{ spire_tmp_tgz }}'
         state: absent
 - name: link install dir
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ spire_install_dir }}'
     dest: '{{ spire_link_dir }}'
     state: link
 - name: link bins
-  become: yes
+  become: true
   become_user: root
   with_items:
     - spire-server

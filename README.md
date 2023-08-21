@@ -1,6 +1,6 @@
 andrewrothstein.spire
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-spire.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-spire)
+![Build Status](https://github.com/andrewrothstein/ansible-spire/actions/workflows/build.yml/badge.svg)
 
 Installs [spire](spiffe.io).
 
