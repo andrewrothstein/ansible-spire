@@ -1,6 +1,6 @@
 ---
 # defaults file for spire
-spire_ver: 1.7.2
+spire_ver: 1.7.6
 spire_platform: linux-amd64-glibc
 spire_parent_install_dir: /usr/local
 spire_mirror: https://github.com/spiffe/spire/releases/download
@@ -8,3 +8,23 @@ spire_checksums:
   '1.7.2':
     # https://github.com/spiffe/spire/releases/download/v1.7.2/spire-1.7.2-linux-amd64-glibc_sha256sum.txt
     linux-amd64-glibc: sha256:d4eb3a52a32e08c9abffafcf9134346b30102fdd9721a8d13ae87cdf911e67f6
+  '1.7.3':
+    # https://github.com/spiffe/spire/releases/download/v1.7.3/spire-1.7.3-linux-amd64-glibc_sha256sum.txt
+    linux-amd64-glibc: sha256:5214b3b036cd13fc3159bc10bb0835fb5559f822ead6d2689f8a24f90d885183
+    # https://github.com/spiffe/spire/releases/download/v1.7.3/spire-1.7.3-linux-arm64-glibc_sha256sum.txt
+    linux-arm64-glibc: sha256:c1cc4a032df28573efba5208fc260a0223a64a2d00cb40506268a96f06640342
+  '1.7.4':
+    # https://github.com/spiffe/spire/releases/download/v1.7.4/spire-1.7.4-linux-amd64-glibc_sha256sum.txt
+    linux-amd64-glibc: sha256:c23cde824427ecb5bab19efb920b3d5fbded75bcce3d1c9a2d9ecffa59f06d8e
+    # https://github.com/spiffe/spire/releases/download/v1.7.4/spire-1.7.4-linux-arm64-glibc_sha256sum.txt
+    linux-arm64-glibc: sha256:b376e052fd7fd9a2f475afda58ee7565f58f14f7877df8f7425c82f8b4af03b2
+  '1.7.5':
+    # https://github.com/spiffe/spire/releases/download/v1.7.5/spire-1.7.5-linux-amd64-glibc_sha256sum.txt
+    linux-amd64-glibc: sha256:22f50392a0756a0c2bd0e573d0e83b6f108fdffc3c18e08ce9728dd855ff38d1
+    # https://github.com/spiffe/spire/releases/download/v1.7.5/spire-1.7.5-linux-arm64-glibc_sha256sum.txt
+    linux-arm64-glibc: sha256:bb21f0827852cc9527e6e1d6c002a64b766062731853b4581b696e3e2b6640eb
+  '1.7.6':
+    # https://github.com/spiffe/spire/releases/download/v1.7.6/spire-1.7.6-linux-amd64-glibc_sha256sum.txt
+    linux-amd64-glibc: sha256:dafe01845eda2f18cc82eacc11fea21bed6c62628b0c75d8479b1417e2f5a916
+    # https://github.com/spiffe/spire/releases/download/v1.7.6/spire-1.7.6-linux-arm64-glibc_sha256sum.txt
+    linux-arm64-glibc: sha256:6c99d5c6487d4fda442ba42804334086267eb2b435cc291853598ad3f6206350

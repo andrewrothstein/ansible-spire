@@ -1,8 +1,9 @@
 ---
-- include_role:
+- name: Installing andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
     name: andrewrothstein.unarchivedeps
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -11,51 +12,52 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for install...
+- name: Check for install...
   become: true
-  stat:
+  ansible.builtin.stat:
     path: '{{ spire_install_dir }}'
   changed_when: false
   register: spire_binary
-- when: not spire_binary.stat.exists
+- name: Downloading and installing spire
+  when: not spire_binary.stat.exists
   block:
-    - name: download archive...
+    - name: Download archive...
       become: true
       become_user: root
-      get_url:
+      ansible.builtin.get_url:
         url: '{{ spire_url }}'
         dest: '{{ spire_tmp_tgz }}'
-        mode: 0644
+        mode: '644'
         checksum: '{{ spire_checksum }}'
-    - name: unarchiving {{ spire_tmp_tgz }}
+    - name: Unarchiving {{ spire_tmp_tgz }}
       become: true
       become_user: root
-      unarchive:
+      ansible.builtin.unarchive:
         remote_src: true
         src: '{{ spire_tmp_tgz }}'
         dest: '{{ spire_parent_install_dir }}'
         creates: '{{ spire_install_dir }}'
   always:
-    - name: rm -f {{ spire_tmp_tgz }}
+    - name: Rm -f {{ spire_tmp_tgz }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ spire_tmp_tgz }}'
         state: absent
-- name: link install dir
+- name: Linking install dir
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ spire_install_dir }}'
     dest: '{{ spire_link_dir }}'
     state: link
-- name: link bins
+- name: Linking binaries...
   become: true
   become_user: root
   with_items:
     - spire-server
     - spire-agent
-  file:
+  ansible.builtin.file:
     src: '{{ spire_link_dir }}/bin/{{ item }}'
     dest: '{{ spire_parent_install_dir }}/bin/{{ item }}'
     state: link
