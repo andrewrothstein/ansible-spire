@@ -1,7 +1,11 @@
 ---
 # defaults file for spire
-spire_ver: 1.7.6
-spire_platform: linux-amd64-glibc
+spire_ver: 1.11.2
+
+spire_arch_map:
+  x86_64: amd64
+  aarch64: arm64
+
 spire_parent_install_dir: /usr/local
 spire_mirror: https://github.com/spiffe/spire/releases/download
 spire_checksums:
@@ -28,3 +32,138 @@ spire_checksums:
     linux-amd64-glibc: sha256:dafe01845eda2f18cc82eacc11fea21bed6c62628b0c75d8479b1417e2f5a916
     # https://github.com/spiffe/spire/releases/download/v1.7.6/spire-1.7.6-linux-arm64-glibc_sha256sum.txt
     linux-arm64-glibc: sha256:6c99d5c6487d4fda442ba42804334086267eb2b435cc291853598ad3f6206350
+  '1.8.0':
+    # https://github.com/spiffe/spire/releases/download/v1.8.0/spire-1.8.0-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:a95764d6964f41a125e580c699d378b8be3d782e93df4d2da850b024eeef683e
+    # https://github.com/spiffe/spire/releases/download/v1.8.0/spire-1.8.0-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:6d66f7929104b7d04a6fc5a4d1488013682fb340c651afc870c3114be9840d3e
+  '1.8.1':
+    # https://github.com/spiffe/spire/releases/download/v1.8.1/spire-1.8.1-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:9480749db7f9a065da06ded7927bea0b4a748ba5fdb426c42edf2ca7275bb7a0
+    # https://github.com/spiffe/spire/releases/download/v1.8.1/spire-1.8.1-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:eb518680a1de3da2c54e27569723c9862389d8c8e6fc50939b916b949051d52a
+  '1.8.2':
+    # https://github.com/spiffe/spire/releases/download/v1.8.2/spire-1.8.2-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:df3a1efe80f308320072573a9b44ed851824ba72cd89b611130858dbe89c034b
+    # https://github.com/spiffe/spire/releases/download/v1.8.2/spire-1.8.2-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:60a37f1170fe9d0c006f3721757c3bd86ada28166f2aa1e75d41fc6d09bbbb4d
+  '1.8.3':
+    # https://github.com/spiffe/spire/releases/download/v1.8.3/spire-1.8.3-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:500095b6b334bc8798734faa0603622879341fa2eee1cf4d63a808bb96c7a3fc
+    # https://github.com/spiffe/spire/releases/download/v1.8.3/spire-1.8.3-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:1ed479dc4430f211a0cecd56903348b6ce0ef746032ede73b212329c6f730fca
+  '1.8.4':
+    # https://github.com/spiffe/spire/releases/download/v1.8.4/spire-1.8.4-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:624d48661f242db1551bfa25c995b248aca6b2471ff82c806859fb21d9038088
+    # https://github.com/spiffe/spire/releases/download/v1.8.4/spire-1.8.4-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:8f70598d91f9129f68317f7de98ce5b060e22024b8929407eea277b4179c422f
+  '1.8.5':
+    # https://github.com/spiffe/spire/releases/download/v1.8.5/spire-1.8.5-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:2dd176fb0745377fc22517035f19dbfcefc407ee3e3234a8905d84a0c36a1ab2
+    # https://github.com/spiffe/spire/releases/download/v1.8.5/spire-1.8.5-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:4ee7ae1dd2b17f0ebaca1beed0b69becbe3eb0fd19b4a75dd5d5b05ed95766c2
+  '1.8.6':
+    # https://github.com/spiffe/spire/releases/download/v1.8.6/spire-1.8.6-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:3b1751ab65074e51f2ae7e2cafcaa0bcaa7191dc4b3893306ee353d5525ff217
+    # https://github.com/spiffe/spire/releases/download/v1.8.6/spire-1.8.6-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:ff2b675183af3de7ed1d074509adecf43edcc614fef43a7ae4ea1fef204328b1
+  '1.8.7':
+    # https://github.com/spiffe/spire/releases/download/v1.8.7/spire-1.8.7-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:e0eb89b4895a7e5fbda2ae61d5926968172d36f4f951066ce2722fabb184cf8c
+    # https://github.com/spiffe/spire/releases/download/v1.8.7/spire-1.8.7-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:6a30316dfff01927f3bd22646c7b596e3023efb38e549b3d7c074efc9a2ab5b4
+  '1.8.8':
+    # https://github.com/spiffe/spire/releases/download/v1.8.8/spire-1.8.8-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:adcb4ce1240f240dfd44471c1279fb46338d1bdbfd563de8ed775f36ce5583b3
+    # https://github.com/spiffe/spire/releases/download/v1.8.8/spire-1.8.8-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:a95d022993dc1124d9f0ac38bbe3de38980a9f8df3e7afe779d4436227f90539
+  '1.8.9':
+    # https://github.com/spiffe/spire/releases/download/v1.8.9/spire-1.8.9-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:405298f9a39470f0663fd204b9f76c17e7f6e008c25e56ba9aafe7edd8dda31f
+    # https://github.com/spiffe/spire/releases/download/v1.8.9/spire-1.8.9-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:cfabc4b774e48bd922e1e5f94cccd40247337a3fa9e9efb031e13b046bd14fbe
+  '1.8.10':
+    # https://github.com/spiffe/spire/releases/download/v1.8.10/spire-1.8.10-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:1e0e2edcc92be2c33a42112c2712fb64757c1e1cfa15b72e2ef8e3be2d823315
+    # https://github.com/spiffe/spire/releases/download/v1.8.10/spire-1.8.10-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:687699d397e4ac33a1ec9dad4d814cee48be0bc61fe7000b2359fbe328c8e11b
+  '1.8.11':
+    # https://github.com/spiffe/spire/releases/download/v1.8.11/spire-1.8.11-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:80a370138d64aad51d3396d9faeb35966f02bcd4def6300bb1e1d83d68e67ba3
+    # https://github.com/spiffe/spire/releases/download/v1.8.11/spire-1.8.11-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:25972eb07a5069a349a6c992d49ef0d7e07f349883f05cb1320281a906109174
+  '1.9.0':
+    # https://github.com/spiffe/spire/releases/download/v1.9.0/spire-1.9.0-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:5de137dcdb7618d3377e415d5f1e2ecb562198f001ff2c90a5e34f51de89b207
+    # https://github.com/spiffe/spire/releases/download/v1.9.0/spire-1.9.0-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:92665e620ea686a00812fb7c2fcf55c1560bd407e507dadcc9c73296467f50f6
+  '1.9.1':
+    # https://github.com/spiffe/spire/releases/download/v1.9.1/spire-1.9.1-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:1273e5658b9b6a51c8b9339abfb5219cabd52e023d4aa1fa32ceb4e2fb797cb7
+    # https://github.com/spiffe/spire/releases/download/v1.9.1/spire-1.9.1-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:c6fa854bd43825be0ec38256ae31825ffa7a8db40ac9d1738bf2032c1d860f64
+  '1.9.2':
+    # https://github.com/spiffe/spire/releases/download/v1.9.2/spire-1.9.2-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:8fcae17dc4d836995a7396c40de5e9e7e4c05e4336eef882e6be6f18a413a7a3
+    # https://github.com/spiffe/spire/releases/download/v1.9.2/spire-1.9.2-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:8f090e246a4a86eafada7495a82e9e1f548b32cd2e9b5a9f0390ed7d19842f00
+  '1.9.3':
+    # https://github.com/spiffe/spire/releases/download/v1.9.3/spire-1.9.3-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:6f8d3b0307628dc3fc59cd879e2e6c58b5d864dd3ad2c7cde258f003792dc88a
+    # https://github.com/spiffe/spire/releases/download/v1.9.3/spire-1.9.3-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:b67804e9ea6e46ffe6002fc62dcc6f069ddca925b78aab234cf43a1667aa5ab0
+  '1.9.4':
+    # https://github.com/spiffe/spire/releases/download/v1.9.4/spire-1.9.4-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:0d937911e0ea094fc82ae03a49068ec006ea1472b4b985e6cc40bbd0e49c8b18
+    # https://github.com/spiffe/spire/releases/download/v1.9.4/spire-1.9.4-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:2019d39721f1864968a5e08f626ccb3a206c085d356380eaceba0327f2cb161a
+  '1.9.5':
+    # https://github.com/spiffe/spire/releases/download/v1.9.5/spire-1.9.5-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:bc6a1856301d6acb651fa7ed8534a439caa71505efd90a78388559c88d437c0e
+    # https://github.com/spiffe/spire/releases/download/v1.9.5/spire-1.9.5-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:34f4f4196b3244bc8e672b56d1e5892fba0faa9c6196cf44e7586775f431bd4a
+  '1.9.6':
+    # https://github.com/spiffe/spire/releases/download/v1.9.6/spire-1.9.6-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:f9032479b42d9fc9d1b0c7cd4f789bb5b3882f8bb5b0cf2236b66d60801f8bde
+    # https://github.com/spiffe/spire/releases/download/v1.9.6/spire-1.9.6-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:0f5e50d69c485fae6b74e5bf2c35a43d405ee41d9ccfa2871ccc632fb58dad9c
+  '1.10.0':
+    # https://github.com/spiffe/spire/releases/download/v1.10.0/spire-1.10.0-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:2bbf47a834b5345509c1cd97860dfa4b51d5fb355e303341b5fbd775340ea825
+    # https://github.com/spiffe/spire/releases/download/v1.10.0/spire-1.10.0-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:775ca97f503f34e5ea6df65c509152e31fce2e15a5bf257ad43d9978b6ba5575
+  '1.10.1':
+    # https://github.com/spiffe/spire/releases/download/v1.10.1/spire-1.10.1-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:cedb3a647ed4107bd2cda4e7831e1c0104a16ffff4d18dade8dc5e2341c0e6a4
+    # https://github.com/spiffe/spire/releases/download/v1.10.1/spire-1.10.1-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:9d5fc864e5dab393f298c86655b367f30423ac7c2f79661b9c25244397abafb1
+  '1.10.2':
+    # https://github.com/spiffe/spire/releases/download/v1.10.2/spire-1.10.2-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:2e5b8102e7c3582eaf07f6abe77ff0a017b4b62e52c6c82fa72e118d74f68324
+    # https://github.com/spiffe/spire/releases/download/v1.10.2/spire-1.10.2-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:08ef39bc4e1d0ded34693ab5d5728f888cff3dfe32060b854679871c1aa3811a
+  '1.10.3':
+    # https://github.com/spiffe/spire/releases/download/v1.10.3/spire-1.10.3-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:b138c967e423f82a8da211b68ec827ad8d5482a7f2d0dbbac954e2ec92a9253b
+    # https://github.com/spiffe/spire/releases/download/v1.10.3/spire-1.10.3-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:503e4fef29c9db27172cb1e9bb37779034e9acdbcce894b35f9702622010f2bd
+  '1.10.4':
+    # https://github.com/spiffe/spire/releases/download/v1.10.4/spire-1.10.4-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:f900484c3a18ce84f62fe805256e3a8bbc6a88d75c94dc970b99f57504d98b26
+    # https://github.com/spiffe/spire/releases/download/v1.10.4/spire-1.10.4-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:e8045cf5610969313136562d9ad4121c91989644b13e65ca075b7dae9c551b74
+  '1.11.0':
+    # https://github.com/spiffe/spire/releases/download/v1.11.0/spire-1.11.0-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:62feda9ba3daa386eabd54792f3b9c21b738555150402c6dac81adbd415042bb
+    # https://github.com/spiffe/spire/releases/download/v1.11.0/spire-1.11.0-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:2231de7eac5cc5adc28fc62fbaf9d9e880c9dd8c2a2fc790b20fdd40670e7c9b
+  '1.11.1':
+    # https://github.com/spiffe/spire/releases/download/v1.11.1/spire-1.11.1-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:f98f2f43c34d65d20d3bd50c921808d25e7159d9f7faf25c98661b659ec320bc
+    # https://github.com/spiffe/spire/releases/download/v1.11.1/spire-1.11.1-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:d2b30680aaf54d21074e8b8db33b320f21dcb6410168da7c4752e266aa618642
+  '1.11.2':
+    # https://github.com/spiffe/spire/releases/download/v1.11.2/spire-1.11.2-linux-amd64-musl_sha256sum.txt
+    linux-amd64-musl: sha256:ac53853d478175f15cec8a3757d71638d0821126c0d69583ed4141399e01c49f
+    # https://github.com/spiffe/spire/releases/download/v1.11.2/spire-1.11.2-linux-arm64-musl_sha256sum.txt
+    linux-arm64-musl: sha256:256a8c027eb028c40d27b8d9620763923537102178b3abf698ea12882856cca4

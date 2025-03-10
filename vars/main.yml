@@ -1,6 +1,10 @@
 ---
 # vars file for spire
 spire_name: spire-{{ spire_ver }}
+spire_os: '{{ ansible_system | lower }}'
+spire_arch: '{{ spire_arch_map[ansible_architecture] }}'
+spire_platform: '{{ spire_os }}-{{ spire_arch }}-{{ spire_libc | default("glibc") }}'
+
 spire_tgz: '{{ spire_name }}-{{ spire_platform }}.tar.gz'
 spire_tmp_tgz: '{{ spire_tmp_dir | default("/tmp") }}/{{ spire_tgz }}'
 spire_url: '{{ spire_mirror }}/v{{ spire_ver }}/{{ spire_tgz }}'
